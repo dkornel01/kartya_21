@@ -7,7 +7,13 @@ def tesztek():
     dontetlen_tesztek_gep_vesztett_lapdb()
     mindketto_kifutott_teszt()
     dontetlen_tesztek_dontetlen()
-
+    jnyer21()
+    jnyer19_tob_lap()
+    jnyer19_kev_lap()
+    gnyer21()
+    gnyer19_tob_lap()
+    gnyer19_kev_lap()
+    dontetlen_tesztek_dontetlen_21_kevesebb()
 
 def pontszamitas(lapok):
     pontok = 0
@@ -138,6 +144,82 @@ def dontetlen_tesztek_dontetlen():
     else:
         print("megbukott")
 
+def jnyer21():
+    jatekos = [10, 8, 3]
+    gep = [10, 8,]
+    vart_eredmeny = "gep vesztett kevesebb pont"
+    kapotteredmeny = eredmeny(jatekos, gep)
+    print("jatekos nyert 21 pont")
+    if kapotteredmeny == vart_eredmeny:
+        print("teszt sikeres")
+    else:
+        print("megbukott")
 
+def jnyer19_tob_lap():
+    jatekos = [10, 8, 1]
+    gep = [10, 8,]
+    vart_eredmeny = "gep vesztett kevesebb pont"
+    kapotteredmeny = eredmeny(jatekos, gep)
+    print("jatekos nyert 19 pont több_lap")
+    if kapotteredmeny == vart_eredmeny:
+        print("teszt sikeres")
+    else:
+        print("megbukott")
+
+def jnyer19_kev_lap():
+    jatekos = [10, 9]
+    gep = [10, 7,1]
+    vart_eredmeny = "gep vesztett kevesebb pont"
+    kapotteredmeny = eredmeny(jatekos, gep)
+    print("jatekos nyert 19 pont kevesebb lap")
+    if kapotteredmeny == vart_eredmeny:
+        print("teszt sikeres")
+    else:
+        print("megbukott")
+
+
+def gnyer21():
+    jatekos = [10, 8,]
+    gep = [10, 8, 3]
+    vart_eredmeny = "jatekos vesztett kevesebb pont"
+    kapotteredmeny = eredmeny(jatekos, gep)
+    print("gep nyer 21 pont")
+    if kapotteredmeny == vart_eredmeny:
+        print("teszt sikeres")
+    else:
+        print("megbukott")
+
+def gnyer19_tob_lap():
+    jatekos = [10, 8,]
+    gep = [10, 8, 1]
+    vart_eredmeny = "jatekos vesztett kevesebb pont"
+    kapotteredmeny = eredmeny(jatekos, gep)
+    print("gep nyer 19 pont tobb lap")
+    if kapotteredmeny == vart_eredmeny:
+        print("teszt sikeres")
+    else:
+        print("megbukott")
+
+def gnyer19_kev_lap():
+    jatekos = [10, 7,1]
+    gep = [10, 9,]
+    vart_eredmeny = "jatekos vesztett kevesebb pont"
+    kapotteredmeny = eredmeny(jatekos, gep)
+    print("gep nyer 19 pont tobb lap")
+    if kapotteredmeny == vart_eredmeny:
+        print("teszt sikeres")
+    else:
+        print("megbukott")
+
+def dontetlen_tesztek_dontetlen_21_kevesebb():
+    jatekos = [10, 8, 1]
+    gep = [10, 8, 1]
+    vart_eredmeny = "döntetlen osztoztok a nyereségen"
+    kapotteredmeny = eredmeny(jatekos, gep)
+    print("döntetlen osztoztok a nyereségen 21-nél kevesebb")
+    if kapotteredmeny == vart_eredmeny:
+        print("teszt sikeres")
+    else:
+        print("megbukott")
 
 tesztek()
